@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Explorer-探索这世界</title>
+  <link rel="shortcut icon" href="assets/ico/favicon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+  <link rel='stylesheet' href='assets/css/ourstyle.css' />
+  <!-- <link rel='stylesheet' href='bootstrap-3.3.7-dist' /> -->
+</head>
+<body>
+  <div id="content">
+    <div id="firstpart">
+  <!-- score board part-->
+      <div id="ScoreBoard" >
+        <span id="RoundSpan">
+          <div id="Round">回合:</div>
+          <div id="round-label">1</div>
+          <div id="round-label-after">/5</div>
+        </span>
+        <span id="ScoreSpan">
+          <div id="Scores">总得分:</div>
+          <div id="total-score">0</div>
+        </span>
+      </div>
+    <!-- minimap part-->
+      <div id="minimapdiv">
+        <div id="minimap">
+        </div>
+        <div id="select-btn" onclick="guessButton();" onmouseover="onmouseoverButton(this);" onmouseout="onmouseoutButton(this);">
+          <div class="container">
+          <img src="assets/img/guess_loading.gif" id="loadingImg"/>
+        </div>
+          <span id="guess-btn-text">
+          猜测位置
+        </span>
+        </div>
+      </div>
+      <!--fake guess-->
+      <div id="fakeguess"  onclick="fakeguess_button();" onmouseover="onmouseoverButton(this);" onmouseout="onmouseoutButton(this);">
+        猜测位置
+      </div>
+    <!-- pano-->
+      <div id="pano">
+      </div>
+  </div>
+  <div id="secondpart" >
+    <!--result map-->
+    <div id="resultmap">
+
+    </div>
+    <!-- the result distance and score-->
+    <div id="resultdata">
+      <div id="result_text">
+        <div id="line1">
+          <span id="text1" class="text">你猜测的地点距实际地点</span>
+          <span id="current-distance"><b>0</b></span>
+          <span id="text2" class="text">km。</span>
+        </div>
+        <div id="line2">
+          <span id="text3">你本轮得分为 </span>
+          <span id="current-score"><b>0</b></span>
+        </div>
+      </div>
+      <div class="score-bar" id="score-bar1">
+          <div class="pinimagediv" id="pinimagediv1">
+          <img src="assets/img/anchor.png" class="pinimage" id="pinimage1">
+        </div>
+          <div class="value-bar" id="value-bar1"></div>
+      </div>
+
+    </div>
+    <div class="to-margin">
+      <!--next round button-->
+      <div id="next-btn" class="button"  onmouseover="onmouseoverButton(this);" onmouseout="onmouseoutButton(this);">
+        开始下一轮
+      </div>
+    </div>
+    <div class="float_div">
+      <!--view summary button-->
+        <div id="summary-btn" class="button" onclick="viewSummary();" onmouseover="onmouseoverButton(this);" onmouseout="onmouseoutButton(this);">
+          查看总成绩
+        </div>
+    </div>
+    <div class="float_div2">
+      <a href="./index.php">
+      <div id="return_index" class="button back_to_index_btn" onmouseover="onmouseoverButton(this);" onmouseout="onmouseoutButton(this);">
+        返回主页
+      </div>
+    </a>
+    </div>
+    </div>
+    </div>
+
+    <!--thir part -->
+    <div id="thirdpart">
+      <!--summary map-->
+      <div id="summarymap"></div>
+      <div id="summarydata">
+        <div class="text" id="summarytext">
+          <span>你的总分数为</span>
+          <span id="total-score2"><b>0</b></span>
+        </div>
+
+        <div class="score-bar" id="score-bar2">
+          <div class="pinimagediv" id="pinimagediv2">
+          <img src="assets/img/anchor.png" class="pinimage" id="pinimage2">
+          </div>
+          <div class="value-bar" id="value-bar2"></div>
+        </div>
+
+        <div class="float_div">
+        <div class="button" id="restart-btn" onmouseover="onmouseoverButton(this);" onmouseout="onmouseoutButton(this);">重新开始</div>
+      </div>
+        <div class="float_div2">
+          <a href="./index.php">
+        <div id="return_index2" class="button back_to_index_btn" onmouseover="onmouseoverButton(this);" onmouseout="onmouseoutButton(this);">返回主页</div>
+      </a>
+        </div>
+    </div>
+  </div>
+</body>
+<script src="assets/game/remove_div.js"></script>
+<script src="assets/js/jquery-1.11.1.min.js"></script>
+<script src="assets/game/ourjs.js"></script>
+<script
+    src="http://ditu.google.cn/maps/api/js?signed_in=false&v=3.23&key=AIzaSyC0kaCe1Ou9gBZY_W-OwCYD4u3Re8jVnYU">
+</script>
+<!-- https://maps.googleapis.com/maps/api/js?  -->
+<!-- http://ditu.google.cn/maps/api/js?  -->
+<script src="assets/game/rand_loc.js"></script>
+<script src="assets/game/panomap.js"></script>
+<script src="assets/game/minimap.js"></script>
+<script src="assets/game/summarymap.js"></script>
+<script src="assets/game/resultmap.js"></script>
+<script src="assets/game/game.js"></script>
+</html>

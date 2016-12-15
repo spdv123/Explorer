@@ -1,0 +1,219 @@
+#content {width: 100%;height: 100%;
+font-weight: 500;
+/*font-family:"Times New Roman",Georgia,Serif;*/
+/*font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;*/
+    font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;}
+/*Score board part*/
+.container
+{
+  width: 100%;
+  height: 0px;
+}
+#guess-btn-text
+{
+    line-height: 100%;
+}
+#loadingImg
+{
+  position: relative;
+  margin: auto;
+  height: 40px;
+}
+#ScoreBoard {padding: 10px;width:200px;height:50px;
+            background: rgba(0,0,0,0.7);
+            color:white;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+            border-radius:5%;
+            position: absolute;right:20px;top:10px;z-index: 100;}
+#Round {position: absolute;left:38px;top:10px;width: 90px;height:60px;
+      color: #a0a0a0;}
+#round-label {position: absolute;left:120px;top:10px;height:60px;}
+#round-label-after {position: absolute;left:130px;top:10px;height:60px;}
+#ScoreSpan {position:absolute;left:38px;top:35px;}
+#Scores {color:#a0a0a0;}
+#total-score {position:absolute;left:80px;top:0px;}
+
+/*minimap part*/
+#minimapdiv {position: absolute; bottom:20px;right:20px;z-index: 100;
+            width:300px;height:350px;}/*300 350*/
+#minimap {position: absolute;
+          width:100%;height: 85.7%;
+        background: rgb(0,0,0);}
+#select-btn {
+  position: absolute;bottom: 0px;
+  width:100%;
+  background: #a0a0a0;
+  background-repeat: repeat-x;
+  border-radius:5%;
+  cursor: pointer;
+  color:white;font-size: 30px ;
+  text-align: center;
+  pointer-events:none;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+/*fake guess*/
+#fakeguess {position: absolute;bottom:0px;z-index:100;left:0px;right:0px;
+          width:100% ;height: 40px;
+          background: #2ba560;
+          background-repeat: repeat-x;
+          cursor: pointer;
+          color:white;font-size: 30px;
+        text-align:center;}
+
+/*pano part*/
+#pano {position: absolute; right: 0px;left:0px;top:0px;bottom:0px;z-index: 0;
+      background:rgb(150,150,150);}
+/*resultmap part*/
+#resultmap {
+  position: absolute;right: 0px;left:0px;top:0px;z-index: 200;
+  width: 100%;height: 70%;
+  background: #a0a0a0;
+}
+/*next-btn*/
+#next-btn
+{
+  position: relative;
+  bottom:60px;margin:auto;
+}
+.button {
+  z-index: 300;
+  width: 220px;height: 40px;
+  /*background: linear-gradient(to bottom, #ee5f5b, #bd362f);*/
+  background: #2ba560;
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+  outline: 0;
+  color: #fff;
+  border-radius: 5%;
+}
+.float_div
+{
+  background: black;
+  position: fixed;
+  bottom: 60px;
+  width: 50%;
+  height: 0px;
+  left:0px;
+}
+.float_div2
+{
+  background: black;
+  position: fixed;
+  bottom: 60px;
+  width: 50%;
+  height: 0px;
+  right:0px;
+}
+.back_to_index_btn
+{
+  position: absolute;;
+  left: 10px;
+}
+#summary-btn
+{
+  position: absolute;;
+  right: 10px;
+}
+/*score data*/
+#resultdata
+{
+  position: absolute;top: 70%;bottom: 0px;left: 0px;right: 0px;
+  width: 100%;
+  background: rgb(100,100,100);
+  color: white;
+  text-align: center;
+}
+#line1
+{
+  /*position: absolute;*/
+  position: relative;
+  padding-top: 30px;
+  margin: auto;
+  height: 25%;
+  width: 100%;
+  font-size: 20px;
+}
+#line2
+{
+  position: relative;
+  margin: auto;
+  top:28%;
+  height: 25%;
+  width: 100%;
+  font-size: 20px;
+}
+/*summarymap*/
+#summarymap
+{
+  position: absolute;top:0px;right: 0px;left:0px;
+  height: 70%;
+  background: rgb(0,0,0);
+}
+#summarydata
+{
+  position: absolute;bottom: 0px;left:0px;right:0px;
+  height: 30%;
+  width: 100%;
+  background: rgb(100,100,100);
+}
+.text
+{
+  color: white;
+  text-align: center;
+}
+#summarytext
+{
+  position: absolute;margin: auto;
+  font-size: 20px;
+  width: 100%;
+  top:30px;
+  font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+}
+.to-margin
+{
+  position: absolute;bottom: 0px;z-index:100;left:0px;right:0px;
+  margin: auto;
+  width: 100%;
+  height: 0px;
+  /*background: rgb(50,50,50,1);*/
+}
+#restart-btn
+{
+  float:right;
+}
+#back_to_index_btn
+{
+  float:left;
+}
+.score-bar
+{
+  position: relative;margin: auto;top:20px;
+  width: 80%;
+  height: 23px;
+  background: #c0c0c0;
+
+}
+#score-bar2
+{
+  top:50%;
+}
+.value-bar
+{
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  /*background: #f09b40;*/
+  background:#6699ff;
+}
+.pinimage
+{
+  position: absolute;right:20px;
+  width: 40px;
+}
+.pinimagediv
+{
+  position: absolute;left:60%;bottom: 40px;z-index: 300;
+  width: 40px;
+}
